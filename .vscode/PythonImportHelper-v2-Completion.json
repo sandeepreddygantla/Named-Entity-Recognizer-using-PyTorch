@@ -1,0 +1,85 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "ZipFile",
+        "importPath": "zipfile",
+        "description": "zipfile",
+        "isExtraImport": true,
+        "detail": "zipfile",
+        "documentation": {}
+    },
+    {
+        "label": "GCloud",
+        "importPath": "ner.configuration.gcloud",
+        "description": "ner.configuration.gcloud",
+        "isExtraImport": true,
+        "detail": "ner.configuration.gcloud",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "ner.constant",
+        "description": "ner.constant",
+        "isExtraImport": true,
+        "detail": "ner.constant",
+        "documentation": {}
+    },
+    {
+        "label": "DataIngestionArtifacts",
+        "importPath": "ner.entity.artifacts_entity",
+        "description": "ner.entity.artifacts_entity",
+        "isExtraImport": true,
+        "detail": "ner.entity.artifacts_entity",
+        "documentation": {}
+    },
+    {
+        "label": "DataIngestionConfig",
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "isExtraImport": true,
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "NerException",
+        "importPath": "ner.exception",
+        "description": "ner.exception",
+        "isExtraImport": true,
+        "detail": "ner.exception",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "importPath": "ner.logger",
+        "description": "ner.logger",
+        "isExtraImport": true,
+        "detail": "ner.logger",
+        "documentation": {}
+    },
+    {
+        "label": "DataIngestion",
+        "kind": 6,
+        "importPath": "data_ingestion",
+        "description": "data_ingestion",
+        "peekOfCode": "class DataIngestion:\n    def __init__(\n        self, data_ingestion_config: DataIngestionConfig, gcloud: GCloud\n    ) -> None:\n        self.data_ingestion_config = data_ingestion_config\n        self.gcloud = gcloud\n    def get_data_from_gcp(self, bucket_name: str, file_name: str, path: str) -> ZipFile:\n        logging.info(\"Entered the get_data_from_gcp method of data ingestion class\")\n        try:\n            self.gcloud.sync_folder_from_gcloud(",
+        "detail": "data_ingestion",
+        "documentation": {}
+    }
+]
