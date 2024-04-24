@@ -32,4 +32,3 @@ if validate_check() == True:
         data_preprocessing_config=project_config.get_data_preprocessing_config(),
         data=en_data,
     )
-    

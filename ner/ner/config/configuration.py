@@ -1,10 +1,13 @@
 import os
 import sys
 
+from transformers import AutoConfig, AutoTokenizer
+
 from ner.constants import *
 from ner.entity.config_entity import (
     DataIngestionConfig,
-    DataValidationConfig
+    DataValidationConfig,
+    DataPreprocessingConfig
 )
 from ner.exception import CustomException
 from ner.logger import logger
@@ -55,4 +58,28 @@ class Configuration:
             return data_validation_config
         except Exception as e:
             logger.exception(e)
+            raise CustomException(e, sys)
+        
+        
+    def get_data_preprocessing_config(self):
+        try:
+            model_name = self.config[BASE_MODEL_CONFIG][BASE_MODEL_NAME]
+            tags = self.config[DATA_PREPROCESSING_KEY][NER_TAGS_KEY]
+
+            index2tag = {idx: tag for idx, tag in enumerate(tags)}
+            tag2index = {tag: idx for idx, tag in enumerate(tags)}
+
+            tokenizer = AutoTokenizer.from_pretrained(
+                self.config[BASE_MODEL_CONFIG][BASE_MODEL_NAME]
+            )
+
+            data_preprocessing_config = DataPreprocessingConfig(
+                model_name=model_name,
+                tags=tags,
+                index2tag=index2tag,
+                tag2index=tag2index,
+                tokenizer=tokenizer,
+            )
+            return data_preprocessing_config
+        except Exception as e:
             raise CustomException(e, sys)
