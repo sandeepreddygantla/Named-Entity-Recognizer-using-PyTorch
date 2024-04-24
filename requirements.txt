@@ -1,1 +1,9 @@
+uvicorn[standard]
+transformers
+datasets
+torch
+pyproject-toml
+fastapi
+seqeval
+pandas
 ipykernel
