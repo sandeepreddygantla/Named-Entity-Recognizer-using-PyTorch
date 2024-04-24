@@ -41,7 +41,23 @@
         "documentation": {}
     },
     {
+        "label": "DataValidationConfig",
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "isExtraImport": true,
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
         "label": "DataIngestionConfig",
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "isExtraImport": true,
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "DataValidationConfig",
         "importPath": "ner.entity.config_entity",
         "description": "ner.entity.config_entity",
         "isExtraImport": true,
@@ -65,6 +81,14 @@
         "documentation": {}
     },
     {
+        "label": "CustomException",
+        "importPath": "ner.exception",
+        "description": "ner.exception",
+        "isExtraImport": true,
+        "detail": "ner.exception",
+        "documentation": {}
+    },
+    {
         "label": "logger",
         "importPath": "ner.logger",
         "description": "ner.logger",
@@ -78,6 +102,39 @@
         "description": "ner.logger",
         "isExtraImport": true,
         "detail": "ner.logger",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "ner.logger",
+        "description": "ner.logger",
+        "isExtraImport": true,
+        "detail": "ner.logger",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
         "documentation": {}
     },
     {
@@ -122,12 +179,29 @@
         "documentation": {}
     },
     {
+        "label": "DataValidation",
+        "importPath": "ner.components.data_validation",
+        "description": "ner.components.data_validation",
+        "isExtraImport": true,
+        "detail": "ner.components.data_validation",
+        "documentation": {}
+    },
+    {
         "label": "DataIngestion",
         "kind": 6,
         "importPath": "ner.components.data_ingestion",
         "description": "ner.components.data_ingestion",
         "peekOfCode": "class DataIngestion:\n    def __init__(self, data_ingestion_config: DataIngestionConfig):\n        logger.info(\" Data Ingestion component started...\")\n        self.data_ingestion_config = data_ingestion_config\n    def get_data(self):\n        try:\n            logger.info(\"Loading data from HuggingFace...\")\n            pan_en_data = load_dataset(\n                self.data_ingestion_config.dataset_name,\n                name=self.data_ingestion_config.subset_name,",
         "detail": "ner.components.data_ingestion",
+        "documentation": {}
+    },
+    {
+        "label": "DataValidation",
+        "kind": 6,
+        "importPath": "ner.components.data_validation",
+        "description": "ner.components.data_validation",
+        "peekOfCode": "class DataValidation:\n    def __init__(self, data_validation_config: DataValidationConfig, data: Dict):\n        logger.info(\"DataValidation component started...\")\n        self.data_validation_config = data_validation_config\n        self.data = data\n    def check_columns_names(self) -> bool:\n        try:\n            logger.info(\" Checking Columns of all the splits \")\n            column_check_result = list()\n            for split_name in self.data_validation_config.data_split:",
+        "detail": "ner.components.data_validation",
         "documentation": {}
     },
     {
@@ -144,8 +218,26 @@
         "kind": 5,
         "importPath": "ner.entity.config_entity",
         "description": "ner.entity.config_entity",
-        "peekOfCode": "DataIngestionConfig = namedtuple(\n    \"DataIngestionConfig\", [\"dataset_name\", \"subset_name\", \"data_path\"]\n)",
+        "peekOfCode": "DataIngestionConfig = namedtuple(\n    \"DataIngestionConfig\", [\"dataset_name\", \"subset_name\", \"data_path\"]\n)\nDataValidationConfig = namedtuple(\n    \"DataValidationConfig\",\n    [\"dataset\", \"data_split\", \"columns_check\", \"type_check\", \"null_check\"],\n)",
         "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "DataValidationConfig",
+        "kind": 5,
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "peekOfCode": "DataValidationConfig = namedtuple(\n    \"DataValidationConfig\",\n    [\"dataset\", \"data_split\", \"columns_check\", \"type_check\", \"null_check\"],\n)",
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "validate_check",
+        "kind": 2,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "def validate_check():\n    for i in check[0]:\n        if i == False:\n            return False\n        else:\n            return True",
+        "detail": "demo",
         "documentation": {}
     },
     {
@@ -153,7 +245,7 @@
         "kind": 5,
         "importPath": "demo",
         "description": "demo",
-        "peekOfCode": "project_config = Configuration()\ningestion = DataIngestion(project_config.get_data_ingestion_config())\nen_data = ingestion.get_data()",
+        "peekOfCode": "project_config = Configuration()\ningestion = DataIngestion(project_config.get_data_ingestion_config())\nen_data = ingestion.get_data()\nvalidate = DataValidation(\n    data_validation_config=project_config.get_data_validation_config(), data=en_data\n)\ncheck = validate.drive_checks()\ndef validate_check():\n    for i in check[0]:\n        if i == False:",
         "detail": "demo",
         "documentation": {}
     },
@@ -162,7 +254,7 @@
         "kind": 5,
         "importPath": "demo",
         "description": "demo",
-        "peekOfCode": "ingestion = DataIngestion(project_config.get_data_ingestion_config())\nen_data = ingestion.get_data()",
+        "peekOfCode": "ingestion = DataIngestion(project_config.get_data_ingestion_config())\nen_data = ingestion.get_data()\nvalidate = DataValidation(\n    data_validation_config=project_config.get_data_validation_config(), data=en_data\n)\ncheck = validate.drive_checks()\ndef validate_check():\n    for i in check[0]:\n        if i == False:\n            return False",
         "detail": "demo",
         "documentation": {}
     },
@@ -171,7 +263,25 @@
         "kind": 5,
         "importPath": "demo",
         "description": "demo",
-        "peekOfCode": "en_data = ingestion.get_data()",
+        "peekOfCode": "en_data = ingestion.get_data()\nvalidate = DataValidation(\n    data_validation_config=project_config.get_data_validation_config(), data=en_data\n)\ncheck = validate.drive_checks()\ndef validate_check():\n    for i in check[0]:\n        if i == False:\n            return False\n        else:",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "kind": 5,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "validate = DataValidation(\n    data_validation_config=project_config.get_data_validation_config(), data=en_data\n)\ncheck = validate.drive_checks()\ndef validate_check():\n    for i in check[0]:\n        if i == False:\n            return False\n        else:\n            return True",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "check",
+        "kind": 5,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "check = validate.drive_checks()\ndef validate_check():\n    for i in check[0]:\n        if i == False:\n            return False\n        else:\n            return True",
         "detail": "demo",
         "documentation": {}
     }

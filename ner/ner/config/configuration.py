@@ -4,6 +4,7 @@ import sys
 from ner.constants import *
 from ner.entity.config_entity import (
     DataIngestionConfig,
+    DataValidationConfig
 )
 from ner.exception import CustomException
 from ner.logger import logger
@@ -33,4 +34,25 @@ class Configuration:
             )
             return data_ingestion_config
         except Exception as e:
+            raise CustomException(e, sys)
+        
+    def get_data_validation_config(self) -> DataValidationConfig:
+        try:
+            split = self.config[DATA_VALIDATION_KEY][DATA_SPLIT]
+            columns = self.config[DATA_VALIDATION_KEY][COLUMNS_CHECK]
+
+            null_value_check = self.config[DATA_VALIDATION_KEY][TYPE_CHECK]
+            type_check = self.config[DATA_VALIDATION_KEY][NULL_CHECK]
+
+            data_validation_config = DataValidationConfig(
+                dataset=None,
+                data_split=split,
+                columns_check=columns,
+                type_check=type_check,
+                null_check=null_value_check,
+            )
+
+            return data_validation_config
+        except Exception as e:
+            logger.exception(e)
             raise CustomException(e, sys)
