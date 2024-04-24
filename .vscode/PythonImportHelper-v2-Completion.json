@@ -49,6 +49,14 @@
         "documentation": {}
     },
     {
+        "label": "Configuration",
+        "importPath": "ner.config.configuration",
+        "description": "ner.config.configuration",
+        "isExtraImport": true,
+        "detail": "ner.config.configuration",
+        "documentation": {}
+    },
+    {
         "label": "DataIngestionConfig",
         "importPath": "ner.entity.config_entity",
         "description": "ner.entity.config_entity",
@@ -518,6 +526,55 @@
         "documentation": {}
     },
     {
+        "label": "uvicorn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uvicorn",
+        "description": "uvicorn",
+        "detail": "uvicorn",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "PredictionPipeline",
+        "importPath": "ner.pipeline.prediction_pipeline",
+        "description": "ner.pipeline.prediction_pipeline",
+        "isExtraImport": true,
+        "detail": "ner.pipeline.prediction_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "TrainPipeline",
+        "importPath": "ner.pipeline.train_pipeline",
+        "description": "ner.pipeline.train_pipeline",
+        "isExtraImport": true,
+        "detail": "ner.pipeline.train_pipeline",
+        "documentation": {}
+    },
+    {
         "label": "DataIngestion",
         "kind": 6,
         "importPath": "ner.components.data_ingestion",
@@ -632,6 +689,33 @@
         "description": "ner.pipeline.train_pipeline",
         "peekOfCode": "class TrainPipeline:\n    def __init__(self, config: Configuration):\n        self.config = config\n    def run_data_ingestion(\n        self,\n    ) -> Dict:\n        try:\n            logger.info(\"Running DataIngestion in TrainPipeline\")\n            data_ingestion = DataIngestion(\n                data_ingestion_config=self.config.get_data_ingestion_config()",
         "detail": "ner.pipeline.train_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "train",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def train(request: Request):\n    try:\n        pipeline = TrainPipeline(Configuration())\n        pipeline.run_pipeline()\n        return JSONResponse(content=\"Training Completed\", status_code=200)\n    except Exception as e:\n        raise JSONResponse(content={\"Error while training pipeline\"}, status_code=500)\n@app.post(\"/predict\")\ndef predict(request: Request, data):\n    try:",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "predict",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def predict(request: Request, data):\n    try:\n        pipeline = PredictionPipeline(config=Configuration())\n        response = pipeline.run_pipeline(data=data)\n        return JSONResponse(content=response, status_code=200)\n    except Exception as e:\n        raise JSONResponse(content={\"Error\"}, status_code=500)\nif __name__ == \"__main__\":\n    uvicorn.run(app, host=\"0.0.0.0\", port=8080)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "app = FastAPI()\n@app.post(\"/train\")\ndef train(request: Request):\n    try:\n        pipeline = TrainPipeline(Configuration())\n        pipeline.run_pipeline()\n        return JSONResponse(content=\"Training Completed\", status_code=200)\n    except Exception as e:\n        raise JSONResponse(content={\"Error while training pipeline\"}, status_code=500)\n@app.post(\"/predict\")",
+        "detail": "app",
         "documentation": {}
     },
     {
