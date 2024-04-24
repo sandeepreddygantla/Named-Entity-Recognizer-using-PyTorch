@@ -1,0 +1,178 @@
+[
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "load_dataset",
+        "importPath": "datasets",
+        "description": "datasets",
+        "isExtraImport": true,
+        "detail": "datasets",
+        "documentation": {}
+    },
+    {
+        "label": "Configuration",
+        "importPath": "ner.config.configuration",
+        "description": "ner.config.configuration",
+        "isExtraImport": true,
+        "detail": "ner.config.configuration",
+        "documentation": {}
+    },
+    {
+        "label": "Configuration",
+        "importPath": "ner.config.configuration",
+        "description": "ner.config.configuration",
+        "isExtraImport": true,
+        "detail": "ner.config.configuration",
+        "documentation": {}
+    },
+    {
+        "label": "DataIngestionConfig",
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "isExtraImport": true,
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "DataIngestionConfig",
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "isExtraImport": true,
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "CustomException",
+        "importPath": "ner.exception",
+        "description": "ner.exception",
+        "isExtraImport": true,
+        "detail": "ner.exception",
+        "documentation": {}
+    },
+    {
+        "label": "CustomException",
+        "importPath": "ner.exception",
+        "description": "ner.exception",
+        "isExtraImport": true,
+        "detail": "ner.exception",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "ner.logger",
+        "description": "ner.logger",
+        "isExtraImport": true,
+        "detail": "ner.logger",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "ner.logger",
+        "description": "ner.logger",
+        "isExtraImport": true,
+        "detail": "ner.logger",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "ner.constants",
+        "description": "ner.constants",
+        "isExtraImport": true,
+        "detail": "ner.constants",
+        "documentation": {}
+    },
+    {
+        "label": "read_config",
+        "importPath": "ner.utils",
+        "description": "ner.utils",
+        "isExtraImport": true,
+        "detail": "ner.utils",
+        "documentation": {}
+    },
+    {
+        "label": "namedtuple",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "DataIngestion",
+        "importPath": "ner.components.data_ingestion",
+        "description": "ner.components.data_ingestion",
+        "isExtraImport": true,
+        "detail": "ner.components.data_ingestion",
+        "documentation": {}
+    },
+    {
+        "label": "DataIngestion",
+        "kind": 6,
+        "importPath": "ner.components.data_ingestion",
+        "description": "ner.components.data_ingestion",
+        "peekOfCode": "class DataIngestion:\n    def __init__(self, data_ingestion_config: DataIngestionConfig):\n        logger.info(\" Data Ingestion component started...\")\n        self.data_ingestion_config = data_ingestion_config\n    def get_data(self):\n        try:\n            logger.info(\"Loading data from HuggingFace...\")\n            pan_en_data = load_dataset(\n                self.data_ingestion_config.dataset_name,\n                name=self.data_ingestion_config.subset_name,",
+        "detail": "ner.components.data_ingestion",
+        "documentation": {}
+    },
+    {
+        "label": "Configuration",
+        "kind": 6,
+        "importPath": "ner.config.configuration",
+        "description": "ner.config.configuration",
+        "peekOfCode": "class Configuration:\n    def __init__(self):\n        try:\n            logger.info(\"Reading the configuration file...\")\n            self.config = read_config(file_name=CONFIG_FILE_NAME)\n        except Exception as e:\n            raise CustomException(e, sys)\n    def get_data_ingestion_config(self) -> DataIngestionConfig:\n        try:\n            dataset_name = self.config[DATA_INGESTION_KEY][DATASET_NAME]",
+        "detail": "ner.config.configuration",
+        "documentation": {}
+    },
+    {
+        "label": "DataIngestionConfig",
+        "kind": 5,
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "peekOfCode": "DataIngestionConfig = namedtuple(\n    \"DataIngestionConfig\", [\"dataset_name\", \"subset_name\", \"data_path\"]\n)",
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "project_config",
+        "kind": 5,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "project_config = Configuration()\ningestion = DataIngestion(project_config.get_data_ingestion_config())\nen_data = ingestion.get_data()",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "ingestion",
+        "kind": 5,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "ingestion = DataIngestion(project_config.get_data_ingestion_config())\nen_data = ingestion.get_data()",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "en_data",
+        "kind": 5,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "en_data = ingestion.get_data()",
+        "detail": "demo",
+        "documentation": {}
+    }
+]

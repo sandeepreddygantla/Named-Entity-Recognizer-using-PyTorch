@@ -10,3 +10,4 @@ def read_config(file_name: str) -> Dict:
         content = yaml.safe_load(config)
 
     return content
+
