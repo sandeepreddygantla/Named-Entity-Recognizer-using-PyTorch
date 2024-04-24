@@ -1,14 +1,5 @@
 [
     {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
         "label": "sys",
         "kind": 6,
         "isExtraImport": true,
@@ -18,35 +9,27 @@
         "documentation": {}
     },
     {
-        "label": "ZipFile",
-        "importPath": "zipfile",
-        "description": "zipfile",
+        "label": "load_dataset",
+        "importPath": "datasets",
+        "description": "datasets",
         "isExtraImport": true,
-        "detail": "zipfile",
+        "detail": "datasets",
         "documentation": {}
     },
     {
-        "label": "GCloud",
-        "importPath": "ner.configuration.gcloud",
-        "description": "ner.configuration.gcloud",
+        "label": "Configuration",
+        "importPath": "ner.config.configuration",
+        "description": "ner.config.configuration",
         "isExtraImport": true,
-        "detail": "ner.configuration.gcloud",
+        "detail": "ner.config.configuration",
         "documentation": {}
     },
     {
-        "label": "*",
-        "importPath": "ner.constant",
-        "description": "ner.constant",
+        "label": "Configuration",
+        "importPath": "ner.config.configuration",
+        "description": "ner.config.configuration",
         "isExtraImport": true,
-        "detail": "ner.constant",
-        "documentation": {}
-    },
-    {
-        "label": "DataIngestionArtifacts",
-        "importPath": "ner.entity.artifacts_entity",
-        "description": "ner.entity.artifacts_entity",
-        "isExtraImport": true,
-        "detail": "ner.entity.artifacts_entity",
+        "detail": "ner.config.configuration",
         "documentation": {}
     },
     {
@@ -58,7 +41,71 @@
         "documentation": {}
     },
     {
-        "label": "NerException",
+        "label": "DataPreprocessingConfig",
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "isExtraImport": true,
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "DataValidationConfig",
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "isExtraImport": true,
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "ModelTrainConfig",
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "isExtraImport": true,
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "DataIngestionConfig",
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "isExtraImport": true,
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "DataPreprocessingConfig",
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "isExtraImport": true,
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "DataValidationConfig",
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "isExtraImport": true,
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "ModelTrainConfig",
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "isExtraImport": true,
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "PredictPipelineConfig",
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "isExtraImport": true,
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "CustomException",
         "importPath": "ner.exception",
         "description": "ner.exception",
         "isExtraImport": true,
@@ -66,7 +113,39 @@
         "documentation": {}
     },
     {
-        "label": "logging",
+        "label": "CustomException",
+        "importPath": "ner.exception",
+        "description": "ner.exception",
+        "isExtraImport": true,
+        "detail": "ner.exception",
+        "documentation": {}
+    },
+    {
+        "label": "CustomException",
+        "importPath": "ner.exception",
+        "description": "ner.exception",
+        "isExtraImport": true,
+        "detail": "ner.exception",
+        "documentation": {}
+    },
+    {
+        "label": "CustomException",
+        "importPath": "ner.exception",
+        "description": "ner.exception",
+        "isExtraImport": true,
+        "detail": "ner.exception",
+        "documentation": {}
+    },
+    {
+        "label": "CustomException",
+        "importPath": "ner.exception",
+        "description": "ner.exception",
+        "isExtraImport": true,
+        "detail": "ner.exception",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
         "importPath": "ner.logger",
         "description": "ner.logger",
         "isExtraImport": true,
@@ -74,12 +153,417 @@
         "documentation": {}
     },
     {
+        "label": "logger",
+        "importPath": "ner.logger",
+        "description": "ner.logger",
+        "isExtraImport": true,
+        "detail": "ner.logger",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "ner.logger",
+        "description": "ner.logger",
+        "isExtraImport": true,
+        "detail": "ner.logger",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "ner.logger",
+        "description": "ner.logger",
+        "isExtraImport": true,
+        "detail": "ner.logger",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "ner.logger",
+        "description": "ner.logger",
+        "isExtraImport": true,
+        "detail": "ner.logger",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "torch.nn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch.nn",
+        "description": "torch.nn",
+        "detail": "torch.nn",
+        "documentation": {}
+    },
+    {
+        "label": "XLMRobertaConfig",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "DataCollatorForTokenClassification",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "Trainer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "TrainingArguments",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoConfig",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoTokenizer",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "TokenClassifierOutput",
+        "importPath": "transformers.modeling_outputs",
+        "description": "transformers.modeling_outputs",
+        "isExtraImport": true,
+        "detail": "transformers.modeling_outputs",
+        "documentation": {}
+    },
+    {
+        "label": "RobertaModel",
+        "importPath": "transformers.models.roberta.modeling_roberta",
+        "description": "transformers.models.roberta.modeling_roberta",
+        "isExtraImport": true,
+        "detail": "transformers.models.roberta.modeling_roberta",
+        "documentation": {}
+    },
+    {
+        "label": "RobertaPreTrainedModel",
+        "importPath": "transformers.models.roberta.modeling_roberta",
+        "description": "transformers.models.roberta.modeling_roberta",
+        "isExtraImport": true,
+        "detail": "transformers.models.roberta.modeling_roberta",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "f1_score",
+        "importPath": "seqeval.metrics",
+        "description": "seqeval.metrics",
+        "isExtraImport": true,
+        "detail": "seqeval.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "XLMRobertaForTokenClassification",
+        "importPath": "ner.components.model_architecture",
+        "description": "ner.components.model_architecture",
+        "isExtraImport": true,
+        "detail": "ner.components.model_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "ner.constants",
+        "description": "ner.constants",
+        "isExtraImport": true,
+        "detail": "ner.constants",
+        "documentation": {}
+    },
+    {
+        "label": "read_config",
+        "importPath": "ner.utils",
+        "description": "ner.utils",
+        "isExtraImport": true,
+        "detail": "ner.utils",
+        "documentation": {}
+    },
+    {
+        "label": "namedtuple",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "DataIngestion",
+        "importPath": "ner.components.data_ingestion",
+        "description": "ner.components.data_ingestion",
+        "isExtraImport": true,
+        "detail": "ner.components.data_ingestion",
+        "documentation": {}
+    },
+    {
+        "label": "DataValidation",
+        "importPath": "ner.components.data_validation",
+        "description": "ner.components.data_validation",
+        "isExtraImport": true,
+        "detail": "ner.components.data_validation",
+        "documentation": {}
+    },
+    {
+        "label": "DataPreprocessing",
+        "importPath": "ner.components.data_prepration",
+        "description": "ner.components.data_prepration",
+        "isExtraImport": true,
+        "detail": "ner.components.data_prepration",
+        "documentation": {}
+    },
+    {
+        "label": "TrainTokenClassifier",
+        "importPath": "ner.components.model_trainer",
+        "description": "ner.components.model_trainer",
+        "isExtraImport": true,
+        "detail": "ner.components.model_trainer",
+        "documentation": {}
+    },
+    {
         "label": "DataIngestion",
         "kind": 6,
-        "importPath": "data_ingestion",
-        "description": "data_ingestion",
-        "peekOfCode": "class DataIngestion:\n    def __init__(\n        self, data_ingestion_config: DataIngestionConfig, gcloud: GCloud\n    ) -> None:\n        self.data_ingestion_config = data_ingestion_config\n        self.gcloud = gcloud\n    def get_data_from_gcp(self, bucket_name: str, file_name: str, path: str) -> ZipFile:\n        logging.info(\"Entered the get_data_from_gcp method of data ingestion class\")\n        try:\n            self.gcloud.sync_folder_from_gcloud(",
-        "detail": "data_ingestion",
+        "importPath": "ner.components.data_ingestion",
+        "description": "ner.components.data_ingestion",
+        "peekOfCode": "class DataIngestion:\n    def __init__(self, data_ingestion_config: DataIngestionConfig):\n        logger.info(\" Data Ingestion component started...\")\n        self.data_ingestion_config = data_ingestion_config\n    def get_data(self):\n        try:\n            logger.info(\"Loading data from HuggingFace...\")\n            pan_en_data = load_dataset(\n                self.data_ingestion_config.dataset_name,\n                name=self.data_ingestion_config.subset_name,",
+        "detail": "ner.components.data_ingestion",
+        "documentation": {}
+    },
+    {
+        "label": "DataPreprocessing",
+        "kind": 6,
+        "importPath": "ner.components.data_prepration",
+        "description": "ner.components.data_prepration",
+        "peekOfCode": "class DataPreprocessing:\n    def __init__(self, data_preprocessing_config: DataPreprocessingConfig, data: Any):\n        self.data_preprocessing_config = data_preprocessing_config\n        self.data = data\n    def create_tag_names(self, batch):\n        return {\n            \"ner_tags_str\": [\n                self.data_preprocessing_config.index2tag[idx]\n                for idx in batch[\"ner_tags\"]\n            ]",
+        "detail": "ner.components.data_prepration",
+        "documentation": {}
+    },
+    {
+        "label": "DataValidation",
+        "kind": 6,
+        "importPath": "ner.components.data_validation",
+        "description": "ner.components.data_validation",
+        "peekOfCode": "class DataValidation:\n    def __init__(self, data_validation_config: DataValidationConfig, data: Dict):\n        logger.info(\"DataValidation component started...\")\n        self.data_validation_config = data_validation_config\n        self.data = data\n    def check_columns_names(self) -> bool:\n        try:\n            logger.info(\" Checking Columns of all the splits \")\n            column_check_result = list()\n            for split_name in self.data_validation_config.data_split:",
+        "detail": "ner.components.data_validation",
+        "documentation": {}
+    },
+    {
+        "label": "XLMRobertaForTokenClassification",
+        "kind": 6,
+        "importPath": "ner.components.model_architecture",
+        "description": "ner.components.model_architecture",
+        "peekOfCode": "class XLMRobertaForTokenClassification(RobertaPreTrainedModel):\n    config_class = XLMRobertaConfig\n    def __init__(self, config):\n        super().__init__(config)\n        self.num_labels = config.num_labels\n        # Load model body\n        self.roberta = RobertaModel(config, add_pooling_layer=False)\n        # Set up token classification head\n        self.dropout = nn.Dropout(config.hidden_dropout_prob)\n        self.classifier = nn.Linear(config.hidden_size, config.num_labels)",
+        "detail": "ner.components.model_architecture",
+        "documentation": {}
+    },
+    {
+        "label": "TrainTokenClassifier",
+        "kind": 6,
+        "importPath": "ner.components.model_trainer",
+        "description": "ner.components.model_trainer",
+        "peekOfCode": "class TrainTokenClassifier:\n    def __init__(self, model_trainer_config: ModelTrainConfig, processed_data: Dict):\n        self.model_trainer_config = model_trainer_config\n        self.processed_data = processed_data\n    def create_training_args(\n        self,\n    ):\n        try:\n            logger.info(\"Creating training arguments\")\n            logging_steps = (",
+        "detail": "ner.components.model_trainer",
+        "documentation": {}
+    },
+    {
+        "label": "Configuration",
+        "kind": 6,
+        "importPath": "ner.config.configuration",
+        "description": "ner.config.configuration",
+        "peekOfCode": "class Configuration:\n    def __init__(self):\n        try:\n            logger.info(\"Reading the configuration file...\")\n            self.config = read_config(file_name=CONFIG_FILE_NAME)\n        except Exception as e:\n            raise CustomException(e, sys)\n    def get_data_ingestion_config(self) -> DataIngestionConfig:\n        try:\n            dataset_name = self.config[DATA_INGESTION_KEY][DATASET_NAME]",
+        "detail": "ner.config.configuration",
+        "documentation": {}
+    },
+    {
+        "label": "DataIngestionConfig",
+        "kind": 5,
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "peekOfCode": "DataIngestionConfig = namedtuple(\n    \"DataIngestionConfig\", [\"dataset_name\", \"subset_name\", \"data_path\"]\n)\nDataValidationConfig = namedtuple(\n    \"DataValidationConfig\",\n    [\"dataset\", \"data_split\", \"columns_check\", \"type_check\", \"null_check\"],\n)\nDataPreprocessingConfig = namedtuple(\n    \"DataPreprocessingConfig\",\n    [\"model_name\", \"tags\", \"index2tag\", \"tag2index\", \"tokenizer\"],",
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "DataValidationConfig",
+        "kind": 5,
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "peekOfCode": "DataValidationConfig = namedtuple(\n    \"DataValidationConfig\",\n    [\"dataset\", \"data_split\", \"columns_check\", \"type_check\", \"null_check\"],\n)\nDataPreprocessingConfig = namedtuple(\n    \"DataPreprocessingConfig\",\n    [\"model_name\", \"tags\", \"index2tag\", \"tag2index\", \"tokenizer\"],\n)\nModelTrainConfig = namedtuple(\n    \"ModelTrainConfig\",",
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "DataPreprocessingConfig",
+        "kind": 5,
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "peekOfCode": "DataPreprocessingConfig = namedtuple(\n    \"DataPreprocessingConfig\",\n    [\"model_name\", \"tags\", \"index2tag\", \"tag2index\", \"tokenizer\"],\n)\nModelTrainConfig = namedtuple(\n    \"ModelTrainConfig\",\n    [\n        \"model_name\",\n        \"index2tag\",\n        \"tag2index\",",
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "ModelTrainConfig",
+        "kind": 5,
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "peekOfCode": "ModelTrainConfig = namedtuple(\n    \"ModelTrainConfig\",\n    [\n        \"model_name\",\n        \"index2tag\",\n        \"tag2index\",\n        \"tokenizer\",\n        \"xlmr_config\",\n        \"epochs\",\n        \"batch_size\",",
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "PredictPipelineConfig",
+        "kind": 5,
+        "importPath": "ner.entity.config_entity",
+        "description": "ner.entity.config_entity",
+        "peekOfCode": "PredictPipelineConfig = namedtuple(\n    \"PredictPipelineConfig\",\n    [\"tokenizer\", \"truncation\", \"is_split_into_words\", \"output_dir\", \"tags\"],\n)",
+        "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "validate_check",
+        "kind": 2,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "def validate_check():\n    for i in check[0]:\n        if i == False:\n            return False\n        else:\n            return True\ndef validate_check():\n    for i in check[0]:\n        if i == False:\n            return False",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "validate_check",
+        "kind": 2,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "def validate_check():\n    for i in check[0]:\n        if i == False:\n            return False\n        else:\n            return True\nif validate_check() == True:\n    processed_data = DataPreprocessing(\n        data_preprocessing_config=project_config.get_data_preprocessing_config(),\n        data=en_data,",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "project_config",
+        "kind": 5,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "project_config = Configuration()\ningestion = DataIngestion(project_config.get_data_ingestion_config())\nen_data = ingestion.get_data()\nvalidate = DataValidation(\n    data_validation_config=project_config.get_data_validation_config(), data=en_data\n)\ncheck = validate.drive_checks()\ndef validate_check():\n    for i in check[0]:\n        if i == False:",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "ingestion",
+        "kind": 5,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "ingestion = DataIngestion(project_config.get_data_ingestion_config())\nen_data = ingestion.get_data()\nvalidate = DataValidation(\n    data_validation_config=project_config.get_data_validation_config(), data=en_data\n)\ncheck = validate.drive_checks()\ndef validate_check():\n    for i in check[0]:\n        if i == False:\n            return False",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "en_data",
+        "kind": 5,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "en_data = ingestion.get_data()\nvalidate = DataValidation(\n    data_validation_config=project_config.get_data_validation_config(), data=en_data\n)\ncheck = validate.drive_checks()\ndef validate_check():\n    for i in check[0]:\n        if i == False:\n            return False\n        else:",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "kind": 5,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "validate = DataValidation(\n    data_validation_config=project_config.get_data_validation_config(), data=en_data\n)\ncheck = validate.drive_checks()\ndef validate_check():\n    for i in check[0]:\n        if i == False:\n            return False\n        else:\n            return True",
+        "detail": "demo",
+        "documentation": {}
+    },
+    {
+        "label": "check",
+        "kind": 5,
+        "importPath": "demo",
+        "description": "demo",
+        "peekOfCode": "check = validate.drive_checks()\ndef validate_check():\n    for i in check[0]:\n        if i == False:\n            return False\n        else:\n            return True\ndef validate_check():\n    for i in check[0]:\n        if i == False:",
+        "detail": "demo",
         "documentation": {}
     }
 ]
