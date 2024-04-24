@@ -1,0 +1,11 @@
+.github/
+artifacts/
+env/
+venv/
+logs/
+notebooks/
+artifacts.zip
+.gitignore
+README.md
+demo.py
+LICENSE

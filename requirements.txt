@@ -6,4 +6,3 @@ pyproject-toml
 fastapi
 seqeval
 pandas
-ipykernel
