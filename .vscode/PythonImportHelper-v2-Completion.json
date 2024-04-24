@@ -33,6 +33,22 @@
         "documentation": {}
     },
     {
+        "label": "Configuration",
+        "importPath": "ner.config.configuration",
+        "description": "ner.config.configuration",
+        "isExtraImport": true,
+        "detail": "ner.config.configuration",
+        "documentation": {}
+    },
+    {
+        "label": "Configuration",
+        "importPath": "ner.config.configuration",
+        "description": "ner.config.configuration",
+        "isExtraImport": true,
+        "detail": "ner.config.configuration",
+        "documentation": {}
+    },
+    {
         "label": "DataIngestionConfig",
         "importPath": "ner.entity.config_entity",
         "description": "ner.entity.config_entity",
@@ -145,6 +161,30 @@
         "documentation": {}
     },
     {
+        "label": "CustomException",
+        "importPath": "ner.exception",
+        "description": "ner.exception",
+        "isExtraImport": true,
+        "detail": "ner.exception",
+        "documentation": {}
+    },
+    {
+        "label": "CustomException",
+        "importPath": "ner.exception",
+        "description": "ner.exception",
+        "isExtraImport": true,
+        "detail": "ner.exception",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "importPath": "ner.logger",
+        "description": "ner.logger",
+        "isExtraImport": true,
+        "detail": "ner.logger",
+        "documentation": {}
+    },
+    {
         "label": "logger",
         "importPath": "ner.logger",
         "description": "ner.logger",
@@ -225,6 +265,22 @@
         "documentation": {}
     },
     {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "pandas",
         "kind": 6,
         "isExtraImport": true,
@@ -276,6 +332,14 @@
     },
     {
         "label": "AutoConfig",
+        "importPath": "transformers",
+        "description": "transformers",
+        "isExtraImport": true,
+        "detail": "transformers",
+        "documentation": {}
+    },
+    {
+        "label": "AutoTokenizer",
         "importPath": "transformers",
         "description": "transformers",
         "isExtraImport": true,
@@ -349,6 +413,14 @@
         "documentation": {}
     },
     {
+        "label": "XLMRobertaForTokenClassification",
+        "importPath": "ner.components.model_architecture",
+        "description": "ner.components.model_architecture",
+        "isExtraImport": true,
+        "detail": "ner.components.model_architecture",
+        "documentation": {}
+    },
+    {
         "label": "*",
         "importPath": "ner.constants",
         "description": "ner.constants",
@@ -373,11 +445,44 @@
         "documentation": {}
     },
     {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
         "label": "DataIngestion",
         "importPath": "ner.components.data_ingestion",
         "description": "ner.components.data_ingestion",
         "isExtraImport": true,
         "detail": "ner.components.data_ingestion",
+        "documentation": {}
+    },
+    {
+        "label": "DataIngestion",
+        "importPath": "ner.components.data_ingestion",
+        "description": "ner.components.data_ingestion",
+        "isExtraImport": true,
+        "detail": "ner.components.data_ingestion",
+        "documentation": {}
+    },
+    {
+        "label": "DataPreprocessing",
+        "importPath": "ner.components.data_prepration",
+        "description": "ner.components.data_prepration",
+        "isExtraImport": true,
+        "detail": "ner.components.data_prepration",
+        "documentation": {}
+    },
+    {
+        "label": "DataPreprocessing",
+        "importPath": "ner.components.data_prepration",
+        "description": "ner.components.data_prepration",
+        "isExtraImport": true,
+        "detail": "ner.components.data_prepration",
         "documentation": {}
     },
     {
@@ -389,11 +494,19 @@
         "documentation": {}
     },
     {
-        "label": "DataPreprocessing",
-        "importPath": "ner.components.data_prepration",
-        "description": "ner.components.data_prepration",
+        "label": "DataValidation",
+        "importPath": "ner.components.data_validation",
+        "description": "ner.components.data_validation",
         "isExtraImport": true,
-        "detail": "ner.components.data_prepration",
+        "detail": "ner.components.data_validation",
+        "documentation": {}
+    },
+    {
+        "label": "TrainTokenClassifier",
+        "importPath": "ner.components.model_trainer",
+        "description": "ner.components.model_trainer",
+        "isExtraImport": true,
+        "detail": "ner.components.model_trainer",
         "documentation": {}
     },
     {
@@ -501,6 +614,24 @@
         "description": "ner.entity.config_entity",
         "peekOfCode": "PredictPipelineConfig = namedtuple(\n    \"PredictPipelineConfig\",\n    [\"tokenizer\", \"truncation\", \"is_split_into_words\", \"output_dir\", \"tags\"],\n)",
         "detail": "ner.entity.config_entity",
+        "documentation": {}
+    },
+    {
+        "label": "PredictionPipeline",
+        "kind": 6,
+        "importPath": "ner.pipeline.prediction_pipeline",
+        "description": "ner.pipeline.prediction_pipeline",
+        "peekOfCode": "class PredictionPipeline:\n    def __init__(self, config: Configuration):\n        self.prediction_pipeline_config = config.get_model_predict_pipeline_config()\n        self.tokenizer = self.prediction_pipeline_config.tokenizer\n        self.tags = self.prediction_pipeline_config.tags\n        if len(os.listdir(self.prediction_pipeline_config.output_dir)) == 0:\n            raise LookupError(\n                \"Model not found: Please Run Model trainer before prediction pipeline\"\n            )\n        self.model = XLMRobertaForTokenClassification.from_pretrained(",
+        "detail": "ner.pipeline.prediction_pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "TrainPipeline",
+        "kind": 6,
+        "importPath": "ner.pipeline.train_pipeline",
+        "description": "ner.pipeline.train_pipeline",
+        "peekOfCode": "class TrainPipeline:\n    def __init__(self, config: Configuration):\n        self.config = config\n    def run_data_ingestion(\n        self,\n    ) -> Dict:\n        try:\n            logger.info(\"Running DataIngestion in TrainPipeline\")\n            data_ingestion = DataIngestion(\n                data_ingestion_config=self.config.get_data_ingestion_config()",
+        "detail": "ner.pipeline.train_pipeline",
         "documentation": {}
     },
     {
